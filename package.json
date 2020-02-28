@@ -15,5 +15,17 @@
     "http-errors": "~1.6.3",
     "mongoose": "~5.9.2",
     "morgan": "~1.9.1"
-  }
+  },
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vin23-dev/SEIproject2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vin23-dev/SEIproject2/issues"
+  },
+  "homepage": "https://github.com/vin23-dev/SEIproject2#readme"
 }
