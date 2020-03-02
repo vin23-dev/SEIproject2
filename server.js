@@ -9,7 +9,7 @@ const passport = require('passport');
 require('dotenv').config();
 
 const indexRouter = require("./routes/index");
-const festivalsRouter = require("./routes/festivals");
+const festivalsRouter = require("./routes/collections");
 const usersRouter = require('./routes/users');
 
 require("./config/database");

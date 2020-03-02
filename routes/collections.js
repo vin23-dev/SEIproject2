@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const festivalsCtrl = require("../controllers/users");
+const collectionsCtrl = require("../controllers/collections");
 
 
 
