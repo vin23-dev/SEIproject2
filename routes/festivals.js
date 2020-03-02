@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const tktksCtrl = require("../controllers/festivals");
+const festivalsCtrl = require("../controllers/users");
 
-router.get("/", tktksCtrl.index);
+router.get("/", festivalsCtrl.index);
 
 module.exports = router;
