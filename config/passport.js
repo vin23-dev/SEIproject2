@@ -8,13 +8,13 @@ passport.use(new GoogleStrategy({
     callbackURL: process.env.GOOGLE_CALLBACK
   },
   function(accessToken, refreshToken, profile, cb) {
-    User.findOne({ 'googleId': profile.id }, function(err, User) {
+    User.findOne({ 'googleId': profile.id }, function(err, user) {
         if (err) return cb(err);
-        if (User) {
-          return cb(null, User);
+        if (user) {
+          return cb(null, user);
         } else {
           // we have a new User via OAuth!
-          var newUser = new User({
+          let newUser = new User({
             name: profile.displayName,
             email: profile.emails[0].value,
             googleId: profile.id
@@ -33,7 +33,7 @@ passport.serializeUser(function(user, done) {
 });
 
 passport.deserializeUser(function(id, done) {
-    user.findById(id, function(err, user) {
+    User.findById(id, function(err, user) {
       done(err, user);
     });
 });
