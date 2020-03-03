@@ -1,4 +1,5 @@
 const Festival = require('../models/festival');
+const Comment = require('../models/comment');
 
 module.exports = {
     new: newFestivalView,
@@ -31,5 +32,28 @@ function index(req, res){
 }
 
 function show(req, res){
-    Festival.findById(req.body.id, function(err, festivals))
+    Festival.findById(req.body.id, function(err, festivals){
+        Comment.find({festival: festivals._id}, function(err, comments){
+            res.render('festivals/show', {title: 'Festival Details', festivals, comments});
+        })
+    })
+}
+
+function deleteOne(req, res){
+    Festival.findByIdAndDelete(req.params.id, function(err, festival){
+        res.redirect('/festivals/');
+    })
+}
+
+function showUpdate(req, res){
+    Festival.findById(req.params.id, function(err, festival){
+        console.log(festival);
+        res.render('festivals/update', {title: 'Update Festival', festival: festival})
+    })
+}
+
+function update(req, res){
+    Festival.findByIdAndUpdate(req.params.id, req.body, function(err, festivals){
+        res.redirect('/festivals/')
+    })
 }
