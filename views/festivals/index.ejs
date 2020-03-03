@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Festival Collection</title>
+</head>
+<body>
+    <h2>Festival Collection</h2><br>
+    <table id="festivalList">
+        <thead>
+            <tr>
+                <th>Festival</th>
+                <th>Location<br>Comment</th>
+                <th>Website<br>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% festival.forEach(function(f) { %>
+                <tr>
+                    <td><%= f.title %></td>
+                    <td><%= f.location %></td>
+                    <td><%= f.yearsAttended %></td>
+                    <td><a href="http://<%= f.websiteUrl %>">Festival Website</a></td>
+                    <td><a href="/festivals/<%= f._id %>">Details</a></td>
+                    <form action="/festivals/<%= f._id %>?_method=DELETE" method="POST">
+                    <td><button type="submit" class="btn btn-danger">X</button></td>
+                    </form>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <a href="/festivals/new">Add Festival</a>
+
+</body>
+</html>
