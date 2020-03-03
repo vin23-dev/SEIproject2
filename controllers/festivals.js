@@ -16,10 +16,20 @@ function newFestivalView(req, res){
 
 function createFestival(req, res){
     let festival = new Festival(req.body);
-    book.user = req.user.id
+    festival.user = req.user.id
     festival.save(function(err){
         if (err) return res.render('festival/new');
         console.log(`added festival to database: ` + festival);
         res.redirect('/festival');
     })
+}
+
+function index(req, res){
+    Festival.find({}, function(err, festivsls){
+        res.render('festivals/index', {title: 'My Festivals', festivals})
+    })
+}
+
+function show(req, res){
+    Festival.findById(req.body.id, function(err, festivals))
 }
