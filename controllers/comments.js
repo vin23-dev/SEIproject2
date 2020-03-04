@@ -1,5 +1,4 @@
 const Festival = require('../models/festival');
-const Comment = require('../models/comment');
 
 module.exports = {
     createComment,
@@ -13,8 +12,8 @@ function createComment(req, res){
         festival.comments.push(req.body);
         festival.save(function(err){
             res.redirect(`/festivals/${festival._id}`)
-        })
-    })
+        });
+    });
 }
 
 function updateComment(req, res){
@@ -24,5 +23,5 @@ function updateComment(req, res){
         festival.save(function(err){
             res.redirect(`/festivals/${festival._id}`);
         });
-    })
+    });
 }
