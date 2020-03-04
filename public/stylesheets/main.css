@@ -34,11 +34,5 @@ table td {
   text-decoration: underline;
 }
 
-.collectionview{
-  justify-content: center;
-  display: inline;
-}
 
-input.addNew{
-  width: 500px;
-}
+

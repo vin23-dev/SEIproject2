@@ -29,7 +29,7 @@
                     <td><%= f.location %></td>
                     <td><%= f.yearsAttended %></td>
                     <td><a href="<%= f.websiteUrl %>">Festival Website</a></td>
-                    <td><a href="/festivals/<%= f._id %>">Update</a></td>
+                    <td><a href="/festivals/<%= f._id %>/edit">Edit</a></td>
                     <form action="/festivals/<%= f._id %>?_method=DELETE" method="POST">
                     <td><button type="submit" class="btn btn-danger">X</button></td>
                     </form>

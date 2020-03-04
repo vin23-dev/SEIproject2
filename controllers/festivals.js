@@ -12,7 +12,7 @@ module.exports = {
 }
 
 function newFestivalView(req, res){
-    res.render('festivals/new', {user: req.user})
+    res.render('festivals/new');
 }
 
 function createFestival(req, res){
@@ -26,7 +26,7 @@ function createFestival(req, res){
 
 function index(req, res){
     Festival.find({}, function(err, festivals){
-        res.render('festivals/index', {title: 'My Festivals', festivals, user: req.user})
+        res.render('festivals/index', {title: 'My Festivals', festivals})
     });
 }
 
@@ -38,25 +38,25 @@ function show(req, res){
                 festivals, 
                 comments,
             });
-        })
-    })
+        });
+    });
 }
 
 function deleteOne(req, res){
     Festival.findByIdAndDelete(req.params.id, function(err, festivals){
         res.redirect('/festivals/');
-    })
+    });
 }
 
 function showUpdate(req, res){
     Festival.findById(req.params.id, function(err, festival){
         console.log(festival);
         res.render('festivals/update', {title: 'Update Festival', festival: festival})
-    })
+    });
 }
 
 function update(req, res){
     Festival.findByIdAndUpdate(req.params.id, req.body, function(err, festivals){
         res.redirect('/festivals/')
-    })
+    });
 }
