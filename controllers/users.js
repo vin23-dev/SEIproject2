@@ -4,7 +4,7 @@ module.exports = {
   index,
 };
 
-function index(req, res) {
+function index(req, res, next) {
   User.find({}, function(err, users) {
     if (err) return next(err);
     console.log(req.user);

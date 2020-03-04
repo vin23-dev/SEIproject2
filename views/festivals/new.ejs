@@ -7,20 +7,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Add Festival</title>
 </head>
+<%- include('../partials/header') %>
 <body>
     <h2>New Festival:</h2><br>
-    <form action="/festivals" method="POST">
+    <form action="/festivals/new" method="POST">
         <label>Festival Name:
-            <input type="text" name="title">
+            <input class="addNew" type="text" name="title">
         </label><br><br>
         <label>Location:
-            <input type="text" name="location">
+            <input class="addNew" type="text" name="location">
         </label><br><br>
         <label>Years Attended:
-            <input type="text" name="yearsAttended">
+            <input class="addNew" type="text" name="yearsAttended">
         </label><br><br>
         <label>Website:
-            <input id="urlInput" type="text" name="festivalUrl">
+            <input class="addNew" type="text" name="festivalUrl">
         </label><br><br>
         <button type="submit" class="btn btn-success">Add</button>
     </form>

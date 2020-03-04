@@ -1,7 +1,44 @@
 body {
-  font-family: sans-serif;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  justify-content: center;
+  display: block;
 }
 
-.nav-wrapper{
-  background-color: cornflowerblue;
+a {
+  color: #00B7FF;
+}
+
+#urlInput {
+  
+}
+
+table thead th {
+  padding: 5px;
+  border-bottom: 2px solid #424748;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+}
+
+#festivalList{
+  min-width: 100px;
+  display: inline;
+  align-items: center;
+}
+
+.details-bold {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.collectionview{
+  justify-content: center;
+  display: inline;
+}
+
+input.addNew{
+  width: 500px;
 }

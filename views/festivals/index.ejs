@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Festival Collection</title>
 </head>
+<%- include('../partials/header') %>
 <body>
-    <h2>Festival Collection</h2><br>
+    
+    <h2 class="collectionview">Festival Collection</h2>
+    <hr>
     <table id="festivalList">
         <thead>
             <tr>
-                <th>Festival</th>
-                <th>Location<br>Comment</th>
-                <th>Website<br>URL</th>
+                <th>Festival:</th>
+                <th>Location:</th>
+                <th>Years Attended:</th>
+                <th>Website:</th>
+              
             </tr>
         </thead>
         <tbody>
@@ -23,16 +28,16 @@
                     <td><%= f.title %></td>
                     <td><%= f.location %></td>
                     <td><%= f.yearsAttended %></td>
-                    <td><a href="http://<%= f.websiteUrl %>">Festival Website</a></td>
-                    <td><a href="/festivals/<%= f._id %>">Details</a></td>
+                    <td><a href="<%= f.websiteUrl %>">Festival Website</a></td>
+                    <td><a href="/festivals/<%= f._id %>">Update</a></td>
                     <form action="/festivals/<%= f._id %>?_method=DELETE" method="POST">
                     <td><button type="submit" class="btn btn-danger">X</button></td>
                     </form>
                 </tr>
             <% }) %>
         </tbody>
-    </table>
-    <a href="views/festivals/new">Add Festival</a>
+    </table><br><br>
+    <a class="btn btn-success" href="/festivals/new">Add Festival</a>
 
 </body>
 </html>
