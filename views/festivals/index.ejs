@@ -3,41 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
     <title>Festival Collection</title>
 </head>
 <%- include('../partials/header') %>
-<body>
-    
-    <h2 class="collectionview">Festival Collection</h2>
+
+
+<body id="userPic">
+    <h2 class="collectionview" style="color: orange;">Festival Collection</h2>
     <hr>
+    <center>
     <table id="festivalList">
-        <thead>
+        <thead style="color: orange;">
             <tr>
                 <th>Festival:</th>
                 <th>Location:</th>
                 <th>Years Attended:</th>
                 <th>Website:</th>
+                <th>Reviews:</th>
+                <th>Edit Entry:</th>
               
             </tr>
         </thead>
-        <tbody>
+        <tbody style="color: orange;">
             <% festivals.forEach(function(f) { %>
-                <tr>
+                <tr style="color: orange;">
                     <td><%= f.title %></td>
                     <td><%= f.location %></td>
                     <td><%= f.yearsAttended %></td>
                     <td><a href="<%= f.websiteUrl %>">Festival Website</a></td>
+                    <td><a href="/festivals/comments/<%= f._id %>">Reviews</a></td>
                     <td><a href="/festivals/<%= f._id %>/edit">Edit</a></td>
                     <form action="/festivals/<%= f._id %>?_method=DELETE" method="POST">
-                    <td><button type="submit" class="btn btn-danger">X</button></td>
+                    <td><button type="submit" class="btn btn-danger purple">X</button></td>
                     </form>
                 </tr>
             <% }) %>
         </tbody>
     </table><br><br>
-    <a class="btn btn-success" href="/festivals/new">Add Festival</a>
+    </center>
+    <a class="btn btn-success purple" href="/festivals/new" style="width:  250px;">Add Festival</a>
 
 </body>
 </html>

@@ -34,5 +34,10 @@ table td {
   text-decoration: underline;
 }
 
-
+#userPic{
+  background-image: url("../images/people-in-concert-154147\ \(2\).jpg");
+}
+#newPic{
+  background-image: url("../images/people-inside-a-club-2034851.jpg");
+}
 

@@ -8,22 +8,24 @@
     <title>Add Festival</title>
 </head>
 <%- include('../partials/header') %>
-<body>
+<body style="color: orange;" id="newPic" >
+    <center>
     <h2>New Festival:</h2><br>
-    <form action="/festivals/new" method="POST">
-        <label>Festival Name:
+    <form  action="/festivals/new" method="POST">
+        <label style="color: orange;">Festival Name:
             <input class="addNew" type="text" name="title">
         </label><br><br>
-        <label>Location:
+        <label style="color: orange;">Location:
             <input class="addNew" type="text" name="location">
         </label><br><br>
-        <label>Years Attended:
+        <label style="color: orange;">Years Attended:
             <input class="addNew" type="text" name="yearsAttended">
         </label><br><br>
-        <label>Website:
+        <label style="color: orange;">Website:
             <input class="addNew" type="text" name="websiteUrl">
         </label><br><br>
-        <button type="submit" class="btn btn-success">Add</button>
+        <button style="color: orange;" type="submit" class="btn btn-success purple">Add</button>
     </form>
+    </center>
 </body>
 </html>
