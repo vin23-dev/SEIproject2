@@ -9,6 +9,7 @@ router.post('/new', festivalsCtrl.createFestival);
 router.get('/:id', festivalsCtrl.show);
 router.delete('/:id', festivalsCtrl.delete);
 router.get('/:id/edit', festivalsCtrl.showUpdate);
-router.post('/update/:id', festivalsCtrl.update);
+router.put('/update/:id', festivalsCtrl.update);
+
 
 module.exports = router;
