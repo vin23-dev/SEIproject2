@@ -8,22 +8,26 @@
     <title>Update Festival</title>
 </head>
 <%- include('../partials/header') %>
-<body>
-    <h2>Update Festival:</h2><br>
+<body id="updatePic">
+    <center>
+    <h2 style="color: orange;">Update Festival:</h2><br>
+    </center>
+    <center>
     <form action="/festivals/update/<%= festival._id %>?_method=PUT" method="POST">
-        <label>Festival Name:
-            <input type="text" name="title" value="<%= festival.title %>">
+        <label style="background-color: rgba(0,0,0,0.8);">Festival Name:
+            <input style="color: orange; text-align: center;" type="text" name="title" value="<%= festival.title %>">
         </label><br><br>
-        <label>Location:
-            <input type="text" name="location" value="<%= festival.location %>">
+        <label style="background-color: rgba(0,0,0,0.8);">Location:
+            <input style="color: orange; text-align: center;" type="text" name="location" value="<%= festival.location %>">
         </label><br><br>
-        <label>Years Attended:
-            <input type="text" name="yearsAttended" value="<%= festival.yearsAttended %>">
+        <label style="background-color: rgba(0,0,0,0.8);">Years Attended:
+            <input style="color: orange; text-align: center;" type="text" name="yearsAttended" value="<%= festival.yearsAttended %>">
         </label><br><br>
-        <label>Website:
-            <input id="urlInput" type="text" name="festivalUrl" value="<%= festival.websiteUrl %>">
+        <label style="background-color: rgba(0,0,0,0.8);">Website:
+            <input style="color: orange; text-align: center;" id="urlInput" type="text" name="festivalUrl" value="<%= festival.websiteUrl %>">
         </label><br><br>
-        <button type="submit" class="btn btn-success">Edit</button>
+        <button type="submit" class="btn btn-success purple">Edit</button>
     </form>
+</center>
 </body>
 </html>

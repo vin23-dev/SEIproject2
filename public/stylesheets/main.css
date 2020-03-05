@@ -27,6 +27,7 @@ table td {
   min-width: 100px;
   display: inline;
   align-items: center;
+  
 }
 
 .details-bold {
@@ -39,5 +40,11 @@ table td {
 }
 #newPic{
   background-image: url("../images/people-inside-a-club-2034851.jpg");
+}
+#commentPic{
+  background-image: url("../images/person-playing-dj-controller-1540319.jpg");
+}
+#updatePic{
+  background-image: url("../images/people-inside-stadium-2263410.jpg");
 }
 

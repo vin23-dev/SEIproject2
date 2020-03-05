@@ -8,20 +8,24 @@
     <title>Festival Reviews</title>
 </head>
 <%- include('../partials/header') %>
-
-<h2 >Festival Reviews</h2>
+<body id="commentPic">
+    
+    <h2 style="color: orange;">Festival Reviews</h2>
     <hr>
     <center>
-    <thead>
-        <% comments.forEach(function(c) { %>
-            <tr>
-                <%= c.text %><br>
-            </tr>
-        <% }) %>
-    </thead>
-        <tbody>
-<form action="/festivals/comments/<%= festivalId %>" method="POST">
-    <!-- Be sure name attributes of inputs match the model properties -->
-    <input name="text">
-    <button type="submit">ADD COMMENT</button>
-</form>
+        <thead>
+            <% comments.forEach(function(c) { %>
+                <tr>
+                    <div style="color: orange;"><%= c.text %></div><br>
+                </tr>
+                <% }) %>
+            </thead>
+            <tbody>
+                <form action="/festivals/comments/<%= festivalId %>" method="POST">
+                    <!-- Be sure name attributes of inputs match the model properties -->
+                    <input name="text">
+                    <button class="btn btn-danger purple" type="submit">ADD COMMENT</button>
+                </form>
+                
+
+</body>

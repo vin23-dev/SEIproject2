@@ -5,16 +5,15 @@ const commentsCtrl = require('../controllers/comments');
 
 
 router.get('/', isLoggedIn, festivalsCtrl.index);
-router.get('/', festivalsCtrl.index);
 router.get('/new', isLoggedIn, festivalsCtrl.new);
-router.get('/new', festivalsCtrl.new);
-router.get('/comments/:id', commentsCtrl.new);
-router.post('/comments/:id', commentsCtrl.createComment);
-router.post('/new', festivalsCtrl.createFestival);
-router.get('/:id', festivalsCtrl.show);
-router.delete('/:id', festivalsCtrl.delete);
-router.get('/:id/edit', festivalsCtrl.showUpdate);
-router.put('/update/:id', festivalsCtrl.update);
+router.get('/new', isLoggedIn, festivalsCtrl.new);
+router.get('/comments/:id', isLoggedIn, commentsCtrl.new);
+router.post('/comments/:id', isLoggedIn, commentsCtrl.createComment);
+router.post('/new', isLoggedIn, festivalsCtrl.createFestival);
+router.get('/:id', isLoggedIn,festivalsCtrl.show);
+router.delete('/:id', isLoggedIn,festivalsCtrl.delete);
+router.get('/:id/edit', isLoggedIn, festivalsCtrl.showUpdate);
+router.put('/update/:id', isLoggedIn, festivalsCtrl.update);
 
 function isLoggedIn(req, res, next) {
     if ( req.isAuthenticated() ) return next();
