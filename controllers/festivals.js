@@ -26,7 +26,7 @@ function createFestival(req, res){
 
 function index(req, res){
     Festival.find({}, function(err, festivals){
-        res.render('festivals/index', {title: 'My Festivals', festivals, userId: user_.id})
+        res.render('festivals/index', {title: 'My Festivals', festivals, user: req.user})
     });
 }
 

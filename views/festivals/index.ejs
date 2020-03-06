@@ -36,7 +36,7 @@
                     <td><a href="<%= f.websiteUrl %>">Festival Website</a></td>
                     <td><a href="/festivals/comments/<%= f._id %>">Reviews</a></td>
                     <td><a href="/festivals/<%= f._id %>/edit">Edit</a></td>
-                    <% if (f.userId.equals(user._id)) { %>
+                    <% if (user._id.equals(f.userId)) { %>
                     <form action="/festivals/<%= f._id %>?_method=DELETE" method="POST">
                     <td><button type="submit" class="btn btn-danger purple">X</button></td>
                     </form>

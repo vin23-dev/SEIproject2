@@ -12,7 +12,7 @@ const festivalSchema = new Schema({
     location: String,
     yearsAttended: Number,
     websiteUrl: String,
-    userId: {type: Schema.Types.ObjectId, ref: 'Festival'},
+    userId: {type: Schema.Types.ObjectId, ref: 'User'},
     comments: [commentSchema]
 },{
     timestamps: true
