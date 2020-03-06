@@ -3,7 +3,6 @@ const router = express.Router();
 const festivalsCtrl = require('../controllers/festivals');
 const commentsCtrl = require('../controllers/comments');
 
-
 router.get('/', isLoggedIn, festivalsCtrl.index);
 router.get('/new', isLoggedIn, festivalsCtrl.new);
 router.get('/new', isLoggedIn, festivalsCtrl.new);
