@@ -9,6 +9,8 @@ Festival tracker that allows the addition of new festivals that I have attended,
 
 [https://festival-tracker.herokuapp.com/](https://festival-tracker.herokuapp.com/)
 
+[https://trello.com/b/KWHND6VV/sei-project-2-workflow](https://trello.com/b/KWHND6VV/sei-project-2-workflow)
+
 ## Wireframe
 
 ![https://i.imgur.com/MNHfnhF.jpg?1](https://i.imgur.com/MNHfnhF.jpg?1)
