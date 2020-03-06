@@ -8,21 +8,22 @@ Festival tracker that allows the addition of new festivals that I have attended,
 
 ## Wireframe
 
-![https://i.imgur.com/jndg4ig.png](https://i.imgur.com/jndg4ig.png)
+![https://i.imgur.com/MNHfnhF.jpg?1](https://i.imgur.com/MNHfnhF.jpg?1)
 
 ## Screenshots:
 
-![https://imgur.com/y2Wa89W](https://imgur.com/y2Wa89W)
+![https://i.imgur.com/y2Wa89W.png](https://i.imgur.com/y2Wa89W.png)
 
 
-
-![https://imgur.com/MZauNW6](https://imgur.com/MZauNW6)
-
-
-![https://imgur.com/UwPodo7](https://imgur.com/UwPodo7)
+![https://i.imgur.com/MZauNW6.png](https://i.imgur.com/MZauNW6.png)
 
 
-![https://imgur.com/Z7zTKwv](https://imgur.com/Z7zTKwv)
+![hhttps://i.imgur.com/UwPodo7.jpg](https://i.imgur.com/UwPodo7.jpg)
+
+
+![https://i.imgur.com/Vq52MmR.png](https://i.imgur.com/Vq52MmR.png)
+
+![https://i.imgur.com/Z7zTKwv.png](https://i.imgur.com/Z7zTKwv.png)
 
 
 ## Technologies Used
