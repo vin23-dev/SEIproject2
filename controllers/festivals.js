@@ -16,6 +16,7 @@ function newFestivalView(req, res){
 }
 
 function createFestival(req, res){
+    req.body.userId = req.user._id;
     let festival = new Festival(req.body);
     festival.save(function(err){
         if (err) return res.render('festivals/new');
